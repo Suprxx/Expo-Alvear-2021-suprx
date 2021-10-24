@@ -1,0 +1,129 @@
+/* BODY */
+body {
+    font-family: 'Rubik', sans-serif; /* Familia de letras */
+    color: #333; /* Color de letras */
+    font-size: 1.2rem; /* Tamaño de las letras */
+    line-height: 1.4em; /* Interlineado */
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+p {
+    margin-bottom: 1,6em; /* Margen de parrafos */
+}
+
+.container {
+    width: 85%; /* Ancho */
+    max-width: 850px; /* Ancho maximo */
+    margin: 0 auto; /* Centrado */
+}
+
+/* Cabecera */
+.header {
+    padding: 2rem 0; /* Relleno: 2rem arriba y abajo, 0 a los costado */
+    background: #333; /* Color de fondo del header */
+    color: white; /* Color de letras */
+
+    position: fixed; /* posicion del header es fijo */
+    left: 0; /* izquierdo */
+    top: 0; /* Arriba */
+    width: 100%; /* ancho, se puede usar "right: 0;" */
+}
+
+/* enlaces de la cabecera */
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo-nav-container {
+    display: flex; /* Flex-box */
+    justify-content: space-between; /* Justificar elementos */ /* Uno a la izquierda y otro a la derecha */
+    align-items: center; /* Centrar los items*/
+    flex-wrap: wrap; /* para no forzar a un elemento estar al lado */
+}
+
+.logo{
+    letter-spacing: 15px;
+    font-size: 1.3em;
+}
+/* logo menu para celulares */
+.menu-icon{
+    display: none; /* no se muestra */
+}
+
+.navigation ul{
+    margin: 0; /* Margen */
+    padding: 0; /* Relleno */
+    list-style: none; /* Elemenos de lista (NO) */
+}
+
+.navigation ul li {
+    display:inline-block; /* Elementos uno al lado del otro */
+}
+
+.navigation ul li a{
+    display: block; /* los enlaces se muestran como bloques */
+    padding: 0.5rem 1rem; /* Relleno */
+    transition: all 0.4s linear; /* Transiciones al pasar el mouse por encima */
+    border-radius: 5px; /* Bordes */
+}
+/* Hover es lo que se utiliza para cuando se pasa el mouse por encima */
+.navigation ul li a:hover{
+    background: #4a4a4a;
+}
+
+/* CONTENIDO DE PAGINA */
+.main{
+    padding: 20rem;
+}
+
+/* PIE DE PAGINA */
+
+.footer{
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+/* para celulares */
+@media only screen and (max-width: 767px) {
+    .menu-icon{
+        display: block;
+        cursor: pointer; /* que sea clickeable */
+        padding: 0.5rem 1rem;
+    }
+    
+    .navigation {
+        width: 100%; /* ancho */
+        margin-top: 1rem;
+    }
+
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+    .navigation ul li {
+        display:block; /* Elementos como block */
+    }
+    
+    .navigation ul li a{
+        display: block; /* los enlaces se muestran como bloques */
+        padding: 0.5rem 0; /* Relleno */
+        transition: all 0.4s linear; /* Transiciones al pasar el mouse por encima */
+        border-radius: 5px; /* Bordes */
+    }
+    /* Hover es lo que se utiliza para cuando se pasa el mouse por encima */
+    .navigation ul li a:hover{
+        background: #4a4a4a;
+    }
+}
